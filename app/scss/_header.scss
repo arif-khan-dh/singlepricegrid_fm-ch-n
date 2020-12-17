@@ -1,3 +1,33 @@
 .header {
-    
+    padding-top: 0;
+
+    @include breakpoint-up (medium) {
+        grid-column: 1 / -1;
+        padding-bottom: toRem(40px);
+    }
+
+    & > div {
+        margin-top: toRem(28px);
+    }
+
+    .title {
+        color: $cyan;
+        font-size: $font-lg;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        color: $brightYellow;
+        font-weight: 700;
+    }
+
+    .text {
+        color: $grayishBlue;
+        line-height: 1.5em;
+
+
+        @include breakpoint-up (medium) {
+            line-height: 1.8em;
+        }
+    }
 }

@@ -16,12 +16,50 @@ body {
 
     font-family: "Karla", sans-serif;
     font-size: $font-sm;
+    // background-color: #E6EFF6;
+    background-color: $lightGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .container {
     display: grid;
+    background-color: white;
+    border-radius: toRem(6px);
+    overflow: hidden;
+
+    width: toRem(312px);
+
+    @include breakpoint-up (small) {
+        width: 51%;
+        text-align: center;
+    }
+
+    @include breakpoint-up (medium) {
+        width: 60%;
+        // max-width: toRem(634px);
+        max-width: toRem(734px);
+        text-align: left;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: auto auto;
+        // grid-template-areas: 
+        //     "header header"
+        //     "cta whyus"
+        // ;
+    }
 }
 
 .block {
     padding: toRem(24px);
+
+    @include breakpoint-up (small) {
+        padding: toRem(30px);
+    }
+
+    @include breakpoint-up (medium) {
+        padding: toRem(40px);
+    }
+
 }
